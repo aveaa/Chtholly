@@ -8,5 +8,7 @@
     "myslq_password": "user password",
     "myslq_database": "name database",
     "color": "BLUE",
-    "SteamAPI": "steam ключ"
+    "SteamAPI": "steam ключ",
+    "private_channel": "private channel id",
+    "private_category": "private category id"
 }

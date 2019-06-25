@@ -6,5 +6,6 @@ module.exports = async (client) => {
             type: 'WATCHING'
         },
         status: 'dnd'
-    })
+    });
+    client.creatorVoice = client.channels.get(config.private_channel);
 }
