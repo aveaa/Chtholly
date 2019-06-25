@@ -1,0 +1,11 @@
+{
+    "token": "token",
+    "owner_id": [
+        "id"
+    ],
+    "myslq_host": "localhost",
+    "myslq_user": "user",
+    "myslq_password": "user password",
+    "myslq_database": "name database",
+    "color": "BLUE"
+}
