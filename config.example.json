@@ -7,5 +7,6 @@
     "myslq_user": "user",
     "myslq_password": "user password",
     "myslq_database": "name database",
-    "color": "BLUE"
+    "color": "BLUE",
+    "SteamAPI": "steam ключ"
 }
