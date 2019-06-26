@@ -7,5 +7,4 @@ module.exports = async (client) => {
         },
         status: 'dnd'
     });
-    client.creatorVoice = client.channels.get(config.private_channel);
 }

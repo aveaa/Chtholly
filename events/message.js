@@ -2,7 +2,10 @@ module.exports = async (client, message) => {
     if(message.author.bot) return;
     if(message.channel.type == "dm") return;
 
-    if(mute.has(message.author.id) && mute.get(message.author.id) == message.guild.id) message.delete();
+    if(mute.has(message.author.id) && mute.get(message.author.id) == message.guild.id) {
+        message.delete();
+        return message.author.send("Вы не можете писать сообщение, так как у вас мут.");
+    }
 
     con.query('SELECT * FROM account WHERE d_id = ?', [message.author.id], (err, rows) => {
         if(rows.length < 1) return con.query('INSERT INTO account (name, d_id) VALUES (?, ?)', [message.author.username, message.author.id]);
