@@ -2,6 +2,8 @@ module.exports = async (client, message) => {
     if(message.author.bot) return;
     if(message.channel.type == "dm") return;
 
+    if(mute.has(message.author.id) && mute.get(message.author.id) == message.guild.id) message.delete();
+
     con.query('SELECT * FROM account WHERE d_id = ?', [message.author.id], (err, rows) => {
         if(rows.length < 1) return con.query('INSERT INTO account (name, d_id) VALUES (?, ?)', [message.author.username, message.author.id]);
         con.query('UPDATE account SET xp = xp + 1 WHERE d_id = ?', [message.author.id]);
