@@ -10,9 +10,6 @@ module.exports.run = async (client, message, args) => {
        **Ник: [${res.response.players[0].personaname}](${res.response.players[0].profileurl})**`);
     message.channel.send(embed);
     })
-
-    
-
 }
 
 module.exports.help = {

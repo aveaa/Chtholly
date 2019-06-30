@@ -16,23 +16,19 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `guilds`
+-- Table structure for table `private`
 --
 
-DROP TABLE IF EXISTS `guilds`;
+DROP TABLE IF EXISTS `private`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `guilds` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `guild_name` varchar(30) DEFAULT NULL,
+CREATE TABLE `private` (
+  `name` varchar(40) NOT NULL,
+  `channel_id` varchar(30) DEFAULT NULL,
   `guild_id` varchar(30) DEFAULT NULL,
-  `w_status` varchar(3) DEFAULT '0',
-  `w_text` varchar(200) DEFAULT NULL,
-  `w_channel` varchar(30) DEFAULT NULL,
-  `w_image` varchar(300) DEFAULT NULL,
-  `prefix` varchar(6) DEFAULT 'k.',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `category_id` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -44,4 +40,4 @@ CREATE TABLE `guilds` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-30 18:55:51
+-- Dump completed on 2019-06-30 18:55:52

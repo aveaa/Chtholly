@@ -5,6 +5,6 @@ module.exports = async (client) => {
             name: 'на звёзды',
             type: 'WATCHING'
         },
-        status: 'dnd'
+        status: 'online'
     });
 }
