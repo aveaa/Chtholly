@@ -6,7 +6,7 @@ let
 let talkedRecently = new Set(), channelOwners = new Map(); // таймер и map
 
 module.exports = async (client, oldMember, newMember) => {
-	async function checkmute() {  if (mute.has(newMember.id) && mute.get(newMember.id) == newMember.guild.id) {newMember.setMute(true, "Мут");} else {newMember.setMute(false);} }
+	async function checkmute() {  mute.has(newMember.id) ? newMember.setMute(true, "Мут") : newMember.setMute(false) }
 	con.query("SELECT * FROM private WHERE guild_id = ?", [newMember.guild.id], async (err, rows) => {
 		if (err) throw err;
 		console.log(rows);
